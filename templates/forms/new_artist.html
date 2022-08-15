@@ -2,9 +2,10 @@
 {% block title %}New Artist{% endblock %}
 {% block content %}
   <div class="form-wrapper">
-    <form method="post" class="form">
+      <form method="post" class="form">
       <h3 class="form-heading">List a new artist</h3>
       <div class="form-group">
+        {{form.csrf_token}}
         <label for="name">Name</label>
         {{ form.name(class_ = 'form-control', autofocus = true) }}
       </div>
