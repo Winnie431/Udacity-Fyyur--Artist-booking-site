@@ -43,8 +43,8 @@
 
       <div class="form-group">
           <label for="phone">Phone</label>
-          {{ form.phone(class_ = 'form-control', placeholder='xxx-xxx-xxxx', autofocus = true) }}
-          {% for error in form.phone.errors %}
+          {{ form.phone(class_ = 'form-control', placeholder='123-456-7891', autofocus = true, type = "tel", pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}") }}
+          {% for error in form.phone.errors %} 
         <span style="color:red;"> {{error}}</span>
         {% endfor %}
       </div>

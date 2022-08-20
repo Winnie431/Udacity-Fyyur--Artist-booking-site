@@ -10,8 +10,9 @@
 			ID: {{ venue.id }}
 		</p>
 		<div class="genres">
-			{% for genre in venue.genres %}
-			<span class="genre">{{ genre }}</span>
+			{% set genre_list = venue.genres.split(',') %}
+			{% for genre in genre_list %}
+			<span class="genre">{{ genre|trim('",}{")') }}</span>
 			{% endfor %}
 		</div>
 		<p>
